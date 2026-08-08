@@ -1,0 +1,66 @@
+[project]
+name = "gestion-depenses-pro"
+version = "0.1.0"
+description = "Application CLI de validation et d’analyse de dépenses mensuelles"
+readme = "README.md"
+authors = [
+    { name = "Philippe", email = "sharonphillipe20@gmail.com" }
+]
+requires-python = ">=3.14"
+dependencies = [
+    "httpx>=0.28.1",
+    "pydantic>=2.13.4",
+    "rich>=15.0.0",
+]
+
+[project.scripts]
+gestion-depenses-pro = "gestion_depenses_pro:main"
+
+[build-system]
+requires = ["uv_build>=0.11.30,<0.12.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "mypy>=2.3.0",
+    "pytest>=9.1.1",
+    "pytest-cov>=7.1.0",
+    "pytest-mock>=3.15.1",
+    "ruff>=0.16.2",
+]
+
+[tool.ruff]
+target-version = "py314"
+line-length = 88
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP"]
+
+[tool.mypy]
+python_version = "3.14"
+strict = true
+mypy_path = "src"
+files = [
+    "src/gestion_depenses_pro",
+    "tests",
+]
+enable_error_code = ["ignore-without-code"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = """
+-q
+--strict-config
+--strict-markers
+--cov=gestion_depenses_pro
+--cov-report=term-missing
+--cov-fail-under=95
+"""
+
+[tool.coverage.run]
+branch = true
+source = ["gestion_depenses_pro"]
+
+[tool.coverage.report]
+show_missing = true
+fail_under = 95

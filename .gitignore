@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environnement virtuel
+.venv/
+
+# Caches des outils
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# Couverture
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+
+# Construction et distribution
+build/
+dist/
+*.egg-info/
+
+# Variables locales et secrets
+.env
+.env.*
+!.env.example
+
+# Fichiers générés par l’application
+/data/bilan.json

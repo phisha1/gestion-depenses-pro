@@ -1,0 +1,6 @@
+{
+    "periode": "2026-08",
+    "plafond_xaf": 250000,
+    "devise_source": "XAF",
+    "devises_cibles": ["EUR", "USD"]
+  }

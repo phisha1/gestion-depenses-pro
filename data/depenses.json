@@ -1,0 +1,32 @@
+[
+    {
+      "date": "2026-08-01",
+      "montant": 8000,
+      "categorie": "Alimentation",
+      "description": "Courses du week-end"
+    },
+    {
+      "date": "2026-08-02",
+      "montant": 3500,
+      "categorie": "Transport",
+      "description": "Taxi"
+    },
+    {
+      "date": "2026-08-03",
+      "montant": 15000,
+      "categorie": "Internet",
+      "description": "Forfait mensuel"
+    },
+    {
+      "date": "2026-08-04",
+      "montant": 12000,
+      "categorie": "Alimentation",
+      "description": "Supermarché"
+    },
+    {
+      "date": "2026-08-05",
+      "montant": -5000,
+      "categorie": "Erreur",
+      "description": "Donnée volontairement invalide"
+    }
+  ]
