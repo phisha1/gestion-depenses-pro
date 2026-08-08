@@ -139,3 +139,11 @@ Cette version :
 - ne gère qu’un utilisateur local ;
 - n’effectue aucun paiement ;
 - dépend d’un service externe uniquement pour les conversions.
+
+## Contrôles qualité
+
+```bash
+uv run ruff format --check .
+uv run ruff check .
+uv run mypy
+uv run pytest
