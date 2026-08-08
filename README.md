@@ -1,6 +1,6 @@
 # Gestion Dépenses Pro
 
-Application Python en ligne de commande permettant de valider, analyser,
+Application Python permettant de valider, analyser,
 convertir et exporter des dépenses mensuelles.
 
 ## Fonctionnalités
