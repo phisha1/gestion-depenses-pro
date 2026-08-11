@@ -1,0 +1,27 @@
+name: Simulated deployment
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    name: Deploy to production
+    runs-on: ubuntu-latest
+    environment: production
+
+    steps:
+      - name: Verify production configuration
+        env:
+          APPLICATION_ENV: ${{ vars.APPLICATION_ENV }}
+          JETON_DEPLOIEMENT: ${{ secrets.JETON_DEPLOIEMENT }}
+        run: |
+          test "$APPLICATION_ENV" = "production"
+          test -n "$JETON_DEPLOIEMENT"
+          echo "Configuration de production valide."
+
+      - name: Simulate deployment
+        run: |
+          echo "Déploiement simulé du commit $GITHUB_SHA vers production."
